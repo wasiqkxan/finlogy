@@ -11,11 +11,11 @@ export default defineConfig({
         },
     },
     plugins: [
+        react(), // <-- Moved react() to be the first plugin
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.jsx'],
             refresh: true,
         }),
-        react(),
         tailwindcss(),
     ],
 });
